@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Weather";
+}
+
+<h1>Five day weather forecast for Belfast area.</h1>
+
+<div>
+
+    <br />
+    <input type="button" value="Update Forecast" onclick="location.href='@Url.Action("WeatherDetail", "Home/Weather")'" />
+</div>
+
+
+<div>
+    <h2>Weather Forecast</h2>
+    <span>&nbsp; &nbsp; &nbsp;&nbsp;</span>
+    <table>
+        <tr>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td><img id="imgWeatherIconUrl0" src="@Session["weather_state_abbr0"].ToString()" title="Weather Icon" /></td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td><img id="imgWeatherIconUrl1" src="@Session["weather_state_abbr1"].ToString()" title="Weather Icon" /></td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td><img id="imgWeatherIconUrl2" src="@Session["weather_state_abbr2"].ToString()" title="Weather Icon" /></td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td><img id="imgWeatherIconUrl3" src="@Session["weather_state_abbr3"].ToString()" title="Weather Icon" /></td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td><img id="imgWeatherIconUrl4" src="@Session["weather_state_abbr4"].ToString()" title="Weather Icon" /></td>
+        </tr>
+        <tr>
+            <td><span>&nbsp; &nbsp; &nbsp;&nbsp;</span></td>
+            <td>
+                <strong>Date: </strong>
+                <span id="lblDate0">@Session["applicable_date0"].ToString() </span>
+            </td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td>
+                <strong>Date: </strong>
+                <span id="lblDate1">@Session["applicable_date1"].ToString() </span>
+            </td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td>
+                <strong>Date: </strong>
+                <span id="lblDate2">@Session["applicable_date2"].ToString() </span>
+            </td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td>
+                <strong>Date: </strong>
+                <span id="lblDate3">@Session["applicable_date3"].ToString() </span>
+            </td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td>
+                <strong>Date: </strong>
+                <span id="lblDate4">@Session["applicable_date4"].ToString() </span>
+            </td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+        </tr>
+        <tr>
+            <td><span>&nbsp; &nbsp; &nbsp;&nbsp;</span></td>
+            <td>
+                <strong>Weather State: </strong>
+                <span id="lblState0">@Session["weather_state_name0"].ToString() </span>
+            </td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td>
+                <strong>Weather State: </strong>
+                <span id="lblState1">@Session["weather_state_name1"].ToString() </span>
+            </td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td>
+                <strong>Weather State: </strong>
+                <span id="lblState2">@Session["weather_state_name2"].ToString() </span>
+            </td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td>
+                <strong>Weather State: </strong>
+                <span id="lblState3">@Session["weather_state_name3"].ToString() </span>
+            </td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+            <td>
+                <strong>Weather State: </strong>
+                <span id="lblState4">@Session["weather_state_name4"].ToString() </span>
+            </td>
+            <td><span>&nbsp; &nbsp; &nbsp;</span></td>
+        </tr>
+    </table>
+</div>
+
